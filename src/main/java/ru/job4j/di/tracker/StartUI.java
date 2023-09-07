@@ -7,15 +7,10 @@ import org.springframework.stereotype.Component;
 public class StartUI {
 
     @Autowired
-    private final Store store;
+    private Store store;
 
     @Autowired
-    private final ConsoleInput input;
-
-    public StartUI(Store store, ConsoleInput input) {
-        this.store = store;
-        this.input = input;
-    }
+    private ConsoleInput input;
 
     public void add() {
         store.add(input.askStr("Add name:"));
